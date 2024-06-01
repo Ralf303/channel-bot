@@ -17,9 +17,10 @@ inviteHandler.on("chat_join_request", async (ctx) => {
     await createUser(String(id));
     await ctx.telegram.sendPhoto(
       ctx.from.id,
-      { source: "images/first.png" },
+      { source: "images/main.png" },
       {
-        caption: `Дарова, ${ctx.from.first_name}! Тебе пишут из ${ctx.chat.title}!`,
+        caption: `🎁 50 Монет За Регистрацию!\n\n- Кешбек каждую неделю.\n- Промокоды.\n- Моментальные выплаты, без верификации.\n- Очень много бонусов.\n- Бонус при регистрации\n\nСсылка: <a href="https://drg.so/f5579194e">ТУТ</a> 👈`,
+        parse_mode: "HTML",
       }
     );
   } catch (error) {
