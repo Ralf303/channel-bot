@@ -7,11 +7,12 @@ const inviteHandler = new Composer<CustomContext>();
 
 inviteHandler.on("chat_join_request", async (ctx) => {
   try {
-    const channelId = process.env.CHANNEL_ID!;
+    // const channelId = process.env.CHANNEL_ID!;
 
-    if (String(ctx.chat.id) !== channelId) {
-      return;
-    }
+    // console.log(ctx.chat.id, channelId);
+    // // if (String(ctx.chat.id) !== channelId) {
+    // //   return;
+    // // }
 
     const { id } = ctx.from;
     await createUser(String(id));

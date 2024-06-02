@@ -17,13 +17,6 @@ const start = async () => {
   });
   bot.use(session());
   bot.use(stage.middleware());
-  // bot.use((ctx) => {
-  //   // @ts-ignore
-  //   const photo = ctx.message.photo;
-  //   // @ts-ignore
-  //   const caption = ctx.message.caption;
-  //   ctx.replyWithPhoto(photo[0].file_id, { caption });
-  // });
   bot.use(
     rateLimit({
       window: 1000,
